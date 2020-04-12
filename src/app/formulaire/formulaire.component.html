@@ -1,9 +1,9 @@
 <!-- <div class="col-md-12 order-md-1"> -->
-    <h4 class="mb-3">Billing address</h4>
+    <h4 class="mb-3">Formulaire pour les horaires de train</h4>
     <form class="needs-validation" novalidate (ngSubmit)="onSubmit()" [formGroup]="voyage">
         <div class="row">
         <div class="col-md-6 mb-3">
-            <label for="address1">Ville de départ</label>
+            <label for="address1">Ville de départ (les villes s'afficheront automatiquement) </label>
             <mat-form-field>
             <input id="address1" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
             </mat-form-field>
@@ -13,7 +13,7 @@
             </mat-autocomplete>
         </div>
         <div class="col-md-6 mb-3">
-            <label for="address2">Ville d'arrivée</label>
+            <label for="address2">Ville d'arrivée (les villes s'afficheront automatiquement) </label>
             <mat-form-field>
             <input id="address2" type="text" matInput [formControl]="myControl2" [matAutocomplete]="auto2">
             </mat-form-field>
@@ -36,7 +36,7 @@
         <hr class="mb-4">
         <div class="mb-3">
         <div class="form-group row">
-            <label for="example-time-input" class="col-2 col-form-label">Time</label>
+            <label for="example-time-input" class="col-2 col-form-label">Heure</label>
             <div class="col-10">
             <input class="form-control" formControlName="heure" type="time" id="example-time-input">
             </div>
