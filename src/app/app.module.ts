@@ -3,16 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
+import { CalculDistanceComponent } from './calcul-distance/calcul-distance.component';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { AffichageInfosComponent } from './affichage-infos/affichage-infos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CalculDistanceComponent,
+    FormulaireComponent,
+    AffichageInfosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

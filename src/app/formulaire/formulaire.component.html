@@ -1,0 +1,63 @@
+<!-- <div class="col-md-12 order-md-1"> -->
+    <h4 class="mb-3">Billing address</h4>
+    <form class="needs-validation" novalidate (ngSubmit)="onSubmit()" [formGroup]="voyage">
+        <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="address1">Ville de départ</label>
+            <mat-form-field>
+            <input id="address1" type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            </mat-form-field>
+            
+            <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let name of cityname" [value]="name">{{name}}</mat-option>
+            </mat-autocomplete>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="address2">Ville d'arrivée</label>
+            <mat-form-field>
+            <input id="address2" type="text" matInput [formControl]="myControl2" [matAutocomplete]="auto2">
+            </mat-form-field>
+            
+            <mat-autocomplete #auto2="matAutocomplete">
+            <mat-option *ngFor="let name2 of cityname2" [value]="name2">{{name2}}</mat-option>
+            </mat-autocomplete>
+        </div>
+        </div>
+
+        <hr class="mb-4">
+        <div class="mb-3">
+        <div class="form-group row">
+            <label for="example-date-input" class="col-2 col-form-label">Date</label>
+            <div class="col-10">
+            <input class="form-control" formControlName="dateinput" type="date" id="example-date-input">
+            </div>
+        </div>
+        </div>
+        <hr class="mb-4">
+        <div class="mb-3">
+        <div class="form-group row">
+            <label for="example-time-input" class="col-2 col-form-label">Time</label>
+            <div class="col-10">
+            <input class="form-control" formControlName="heure" type="time" id="example-time-input">
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <label for="country">Liste des monnaies disponibles (10 kms = 1 euro)</label>
+                <select class="custom-select d-block w-100" formControlName="monnaie" required>
+                  <option value="">Veuillez choisir...</option>
+                  <option *ngFor="let monnaie of monnaies" [ngValue]="monnaie.id">{{ monnaie.currencyName }}</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid money.
+                </div>
+              </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Valider</button>
+    </form>
+    <hr class="mb-12">
+<!-- </div> -->
+<div *ngIf="submitted">
+    <app-affichage-infos class="col-md-12 order-md-2 mb-4" [city]="city" [city2]="city2" [datetransform]="datetransform" [coordcity]="coordcity" [myControl]="myControl" [myControl2]="myControl2" [submitted]="submitted" [idmonnaie]="idmonnaie"></app-affichage-infos>
+</div>
