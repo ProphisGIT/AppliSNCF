@@ -39,7 +39,7 @@ export class AffichageInfosComponent implements OnInit, OnChanges {
       // this.city2 = city2[0];
 
       this.traveldata = data['journeys'];
-      console.log(this.coordcity);
+      // console.log(this.traveldata);
     });
     this.setCalculDistance().subscribe((data: any) => {
       this.distance = data.return;
