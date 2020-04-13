@@ -8,14 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { CalculDistanceComponent } from './calcul-distance/calcul-distance.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { AffichageInfosComponent } from './affichage-infos/affichage-infos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculDistanceComponent,
     FormulaireComponent,
     AffichageInfosComponent
   ],
