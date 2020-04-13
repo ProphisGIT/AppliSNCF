@@ -51,7 +51,7 @@ export class FormulaireComponent implements OnInit {
     });
     this.onChanges();
   }
-  getEtatProjetAdmin(val: string) {
+  getCityName(val: string) {
     let url: string = 'https://api.sncf.com/v1/coverage/sncf/places?q=' + val + '&type[]=administrative_region';
     const httpOptions = {
       headers: new HttpHeaders({
@@ -73,7 +73,7 @@ export class FormulaireComponent implements OnInit {
   onChanges(): void {
     this.myControl.valueChanges.subscribe(val => {
       if(val != "") {
-        this.getEtatProjetAdmin(val).subscribe((data: any[]) => {
+        this.getCityName(val).subscribe((data: any[]) => {
           if(data['places'] != undefined) {
             this.cityname = [];
             this.array = data['places'];
@@ -89,7 +89,7 @@ export class FormulaireComponent implements OnInit {
 
     this.myControl2.valueChanges.subscribe(val => {
       if(val != "") {
-        this.getEtatProjetAdmin(val).subscribe((data: any[]) => {
+        this.getCityName(val).subscribe((data: any[]) => {
           if(data['places'] != undefined) {
             this.cityname2 = [];
             this.array2 = data['places'];
