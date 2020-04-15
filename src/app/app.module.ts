@@ -10,12 +10,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { AffichageInfosComponent } from './affichage-infos/affichage-infos.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormulaireComponent,
-    AffichageInfosComponent
+    AffichageInfosComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
